@@ -1,0 +1,44 @@
+server:
+  port: 80
+spring:
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: product_route
+          uri: lb://product
+          predicates:
+            - Path=/product/**
+
+        - id: delivery_route
+          uri: lb://delivery
+          predicates:
+            - Path=/delivery/**
+management:
+  endpoint:
+    gateway:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: gateway
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty.http.client: DEBUG
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+
+
+
+
+

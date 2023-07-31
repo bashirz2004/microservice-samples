@@ -1,0 +1,15 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: activemq-producer-consumer
+active-mq:
+  broker-url: tcp://localhost:61616
+  queue-in-out: queue-in-out
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+
+

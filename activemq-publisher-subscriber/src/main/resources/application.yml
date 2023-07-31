@@ -1,0 +1,16 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: activemq-producer-consumer
+active-mq:
+  broker-url: tcp://localhost:61616
+  topic-in: topic-3
+  topic-out: topic-4
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+
+

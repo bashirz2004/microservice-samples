@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: uaa-jwt
+  datasource:
+    url: jdbc:postgresql://localhost:5432/delivery
+    username: postgres
+    password: postgres
+    hikari:
+      driver-class-name: org.postgresql.Driver
+      connection-timeout: 30000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  security:
+    jwt:
+      secret: bashir
+      expirationDateInMs: 86400000
+server:
+  port: 8088
+
+

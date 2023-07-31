@@ -1,0 +1,17 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: spring-data-redis
+  #redis:
+    #host: 192.168.112.83
+    #port: 16379
+    #database: 0
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+
+
